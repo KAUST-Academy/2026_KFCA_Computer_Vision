@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Day 3 - Object Detection</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <div class="logo me-auto">
+        <a href="index.html">
+          <img src="assets/img/kaust-academy-logo.png" alt="KAUST Academy">
+        </a>
+      </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="day1.html">Day 1</a></li>
+          <li><a href="day2.html">Day 2</a></li>
+          <li><a class="active" href="day3.html">Day 3</a></li>
+          <li><a href="day4.html">Day 4</a></li>
+          <li><a href="day5.html">Day 5</a></li>
+          <li><a href="extra.html">Extra</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs animate-up">
+      <div class="container">
+        <h2>Day 3: Object Detection</h2>
+        <p>Key methods, architectures, and frameworks (R-CNN &amp; YOLO families)</p>
+      </div>
+    </div>
+
+    <!-- Content Table -->
+    <div class="container mb-5 animate-up delay-100">
+      <div class="table-container">
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 25%">Topic</th>
+              <th scope="col">Description &amp; Objectives</th>
+              <th scope="col" style="width: 20%; text-align: center;">Resource</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Lecture 3: Object Detection</strong></td>
+              <td>Key methods, architectures, and frameworks for object detection<br></td>
+              <td class="text-center"><a href="./Slides/Day_3/Lecture-3_Object_Detection.pdf" class="table-btn">Open</a></td>
+            </tr>
+            <tr>
+              <td><strong>Lab: Object Detection with Faster R-CNN</strong></td>
+              <td>Two-stage object detection using Faster R-CNN</td>
+              <td class="text-center">
+                <a href="https://colab.research.google.com/github/KAUST-Academy/2026_KFCA_Computer_Vision/blob/main/Labs/Day_3/Object_Detection_FasterRCNN.ipynb"
+                  class="table-btn">Colab</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Lab: Object Detection with YOLO</strong></td>
+              <td>One-stage real-time object detection using YOLO</td>
+              <td class="text-center">
+                <a href="https://colab.research.google.com/github/KAUST-Academy/2026_KFCA_Computer_Vision/blob/main/Labs/Day_3/Object_Detection_Yolo.ipynb"
+                  class="table-btn">Colab</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Homework: Faster R-CNN</strong></td>
+              <td>Faster R-CNN object detection homework assignment</td>
+              <td class="text-center">
+                <a href="https://colab.research.google.com/github/KAUST-Academy/2026_KFCA_Computer_Vision/blob/main/Labs/Day_3/FasterRCNN_Homework_Assignment.ipynb"
+                  class="table-btn">Colab</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Homework Solution: Faster R-CNN</strong></td>
+              <td>Solution for the Faster R-CNN homework</td>
+              <td class="text-center">
+                <a href="https://colab.research.google.com/github/KAUST-Academy/2026_KFCA_Computer_Vision/blob/main/Labs/Day_3/FasterRCNN_Homework_Assignment_Solution.ipynb"
+                  class="table-btn">Colab</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Homework: Oriented YOLO</strong></td>
+              <td>Oriented bounding-box detection with YOLO</td>
+              <td class="text-center">
+                <a href="https://colab.research.google.com/github/KAUST-Academy/2026_KFCA_Computer_Vision/blob/main/Labs/Day_3/Oriented_YOLO_Homework_Assignment.ipynb"
+                  class="table-btn">Colab</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Homework Solution: Oriented YOLO</strong></td>
+              <td>Solution for the Oriented YOLO homework</td>
+              <td class="text-center">
+                <a href="https://colab.research.google.com/github/KAUST-Academy/2026_KFCA_Computer_Vision/blob/main/Labs/Day_3/Oriented_YOLO_Homework_Assignment_Solution.ipynb"
+                  class="table-btn">Colab</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    AOS.init();
+
+    /**
+     * Mobile nav toggle
+     */
+    const on = (type, el, listener, all = false) => {
+      let selectEl = document.querySelector(el);
+      if (selectEl) {
+        selectEl.addEventListener(type, listener);
+      }
+    }
+
+    on('click', '.mobile-nav-toggle', function (e) {
+      document.querySelector('#navbar').classList.toggle('navbar-mobile')
+      this.classList.toggle('bi-list')
+      this.classList.toggle('bi-x')
+    })
+  </script>
+</body>
+
+</html>
